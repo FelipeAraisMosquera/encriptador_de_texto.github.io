@@ -1,0 +1,151 @@
+
+/*/* Vector */
+.vector{
+height: 55px;
+position: relative;
+margin: 20px 0 0 20px;
+object-fit: cover
+
+}
+/* Dark blue/dark-blue-300 */
+
+
+body {
+           /* position: relative;*/
+            width: 940px;
+            /* Light blue/light-blue-100 */
+            background: #f3f5fc;
+        }
+
+        
+
+        /* Estilos para el título */
+        h1 {
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para el input de texto */
+        #input { 
+            width: 60%;
+            top: 168px;
+            margin-left: 14%;
+            padding-bottom: 288px ;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 120%;
+            color: #0A3871;
+            background-color: inherit;
+            border: none;
+            outline: none;
+        }
+        .rectangulo {
+            position: absolute;
+            width: 30%;
+            height: 944px;
+            right: 40px;
+            top: 40px;
+
+            /* White */
+
+            background: #FFFFFF;
+            /* shadow */
+
+            box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+            border-radius: 32px;
+        }
+        .rectangulo button{
+            width: 90%;
+            height: 67px;  
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #163c69;
+            color: #e0f7fa;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            border: 1px solid #0a3971;
+            border-radius: 30px;
+            display: flex; /* Utilizamos flexbox para centrar el texto verticalmente */
+            justify-content: center; /* Centramos horizontalmente el texto */
+            align-items: center; /* Centramos verticalmente el texto */
+        }
+        .rectangulo h1{
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 120%;
+            color: #0A3871;
+            
+        }
+       /* #estudiante-lupa {
+            margin-top: 50%;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }*/
+
+        /* Estilos para los botones */
+        
+        /* Estilos para el párrafo de salida */
+        /*#output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #F8F9FA;
+            border-radius: 4px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }*/
+        .warning{
+            width: 228px;
+            height: 18px;
+            margin-left: 14%;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 150%;
+            color: #495057;
+            opacity: 0.8;
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+
+        }
+
+        /* Estilos específicos para los botones de encriptar y desencriptar */
+        .button-container {
+          display: flex;
+          margin-left: 14%;
+        }
+        #bcopiar{
+            align-items: center;
+        }
+
+        button {
+          width: 30%;
+          height: 67px;  
+          margin: 10px;
+          padding: 10px 20px;
+          background-color: #163c69;
+          color: #e0f7fa;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+          border: 1px solid #0a3971;
+          border-radius: 30px;
+          display: flex; /* Utilizamos flexbox para centrar el texto verticalmente */
+          justify-content: center; /* Centramos horizontalmente el texto */
+          align-items: center; /* Centramos verticalmente el texto */
+        }
+
+
+       

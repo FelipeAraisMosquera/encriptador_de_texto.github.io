@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="style.css"> 
+<head>
+    <meta charset="UTF-8">
+    <title>Encriptador</title>
+</head>
+
+<body>
+
+   
+            <div class="caja"><!--bloque-->
+                <img class="vector" src="logo-alura.png" alt="Logo Alura" >
+            </div>            
+
+            <textarea  id="input" type="text" placeholder="Ingrese el texto aqui"></textarea>
+            <p class="warning">&#9888; Solo letras minúsculas y sin acentos</p>
+            <div class="button-container">
+                <button id="a">Encriptar</button>
+                <button id="b">Desencriptar</button>
+            </div>
+    
+    
+    <div class="rectangulo" align="center">
+            <img id="estudiante-lupa" src="muñeco-lupa.png" alt="Banner de letra">
+            <h1><p id="output"></p></h1>
+            <button onclick="copiarTexto()">Copiar</button>
+   </div>
+    
+    
+
+    <script>
+        var letras = [];
+        var input = document.querySelector("#input");
+        var Encriptar = document.querySelector("#a");
+        var Desencriptar = document.querySelector("#b");
+        var output = document.querySelector("#output");
+        
+        Encriptar.addEventListener("click", function() {
+            console.log(input.value);
+       
+            for (var i = 0; i < input.value.length; i++) {
+                letras.push(input.value[i]);
+            }  
+            for(var i = 0; i < letras.length; i++) {
+                if(letras[i] == "a") {
+                    letras[i] = "ai";
+                }
+                else if(letras[i] == "e") {
+                    letras[i] = "enter";
+                }
+                else if(letras[i] == "i") {
+                    letras[i] = "imes";
+                }
+                else if(letras[i] == "o") {
+                    letras[i] = "ober";
+                }
+                else if(letras[i] == "u") {
+                    letras[i] = "ufat";
+                }
+            }
+
+            let cadena = letras.join("");
+            document.getElementById("output").innerHTML = cadena;
+
+            letras = [];
+        });
+
+        Desencriptar.addEventListener("click", function() {
+            console.log(input.value);
+       
+            for (var i = 0; i < input.value.length; i++) {
+                letras.push(input.value[i]);
+            }  
+            for(var i = 0; i < letras.length; i++) {
+                if(letras[i] == "a" && letras[i+1] == "i") {
+                    letras[i] = "a";
+                    letras[i+1] = "";
+                }
+                else if(letras[i] == "e" && letras[i+1] == "n" && letras[i+2] == "t" && letras[i+3] == "e" && letras[i+4] == "r") {
+                    letras[i] = "e";
+                    letras[i+1] = "";
+                    letras[i+2] = "";
+                    letras[i+3] = "";
+                    letras[i+4] = "";
+                }
+                else if(letras[i] == "i" && letras[i+1] == "m" && letras[i+2] == "e" && letras[i+3] == "s") {
+                    letras[i] = "i";
+                    letras[i+1] = "";
+                    letras[i+2] = "";
+                    letras[i+3] = "";
+                }
+                else if(letras[i] == "o" && letras[i+1] == "b" && letras[i+2] == "e" && letras[i+3] == "r") {
+                    letras[i] = "o";
+                    letras[i+1] = "";
+                    letras[i+2] = "";
+                    letras[i+3] = "";
+                    
+                }
+                 else if(letras[i] == "u" && letras[i+1] == "f" && letras[i+2] == "a" && letras[i+3] == "t") {
+ 
+                    letras[i] = "u";
+                    letras[i+1] = "";
+                    letras[i+2] = "";
+                    letras[i+3] = "";
+                    
+                }   
+            }
+
+            let cadena = letras.join("");
+            document.getElementById("output").innerHTML = cadena;
+
+            letras = [];
+        });
+
+           function copiarTexto() {
+            var output = document.getElementById("output");
+            var texto = output.textContent;
+            
+            var elementoTemporal = document.createElement("textarea");
+            elementoTemporal.value = texto;
+            document.body.appendChild(elementoTemporal);
+            elementoTemporal.select();
+            document.execCommand("copy");
+            document.body.removeChild(elementoTemporal);
+            
+            /*alert("Texto copiado: " + texto);*/
+        }
+
+
+    </script>
+    
+</body>
